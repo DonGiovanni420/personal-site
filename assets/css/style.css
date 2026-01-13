@@ -484,4 +484,284 @@ footer {
   section {
     padding: 3rem 0;
   }
+
+/* Additional styles for new pages */
+
+/* Services Page */
+.services-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.services-main {
+  padding: 3rem 0;
+}
+
+.service-offerings {
+  display: grid;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.service-offering {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.service-offering.featured {
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
+}
+
+.service-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--accent);
+  color: #000;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-offering h2 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+.service-offering h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
+  text-align: left;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.service-features li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text);
+}
+
+.service-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+}
+
+.best-for {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  border-left: 3px solid var(--accent);
+}
+
+.services-faq {
+  background: rgba(22, 27, 34, 0.3);
+  padding: 4rem 0;
+  margin-top: 4rem;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.faq-item p {
+  color: var(--text);
+  text-align: left;
+}
+
+/* Blog Page */
+.blog-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.blog-card-full {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card-full:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.15);
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: var(--accent);
+  color: #000;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.blog-card-full h2 {
+  text-align: left;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-cta {
+  margin: 4rem 0;
+}
+
+/* Tools Page Enhancements */
+.tools-intro {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge.free {
+  background: var(--success);
+  color: #000;
+}
+
+.badge.premium {
+  background: var(--warning);
+  color: #000;
+}
+
+.tool-features {
+  list-style: none;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.tool-features li {
+  padding: 0.4rem 0;
+  padding-left: 1.3rem;
+  position: relative;
+  color: var(--muted);
+}
+
+.tool-features li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.premium-hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.cta-section {
+  margin: 4rem 0;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tool-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  
+  .service-offering {
+    padding: 2rem 1.5rem;
+  }
 }
