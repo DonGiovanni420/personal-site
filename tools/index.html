@@ -4,41 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homeowner Tools | Joseph McAvoy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Free tools to help homeowners estimate costs, spot contractor red flags, and plan projects confidently.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a href="../index.html">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html">Tools</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../services.html">Services</a>
+      <a href="../index.html#contact">Contact</a>
     </nav>
   </header>
 
   <div class="container tools-page">
     <h1>Homeowner Tools</h1>
-    <p>A growing set of tools to help homeowners plan better, save smarter, and build confidently. No fluff, no shady contractors. Just useful stuff.</p>
+    <p class="tools-intro">A growing set of tools to help homeowners plan better, save smarter, and build confidently. No fluff, no shady contractors. Just useful stuff.</p>
 
+    <!-- Free Email Capture for Tools Access -->
+    <div class="email-capture">
+      <h3>Get Notified When New Tools Launch</h3>
+      <p class="small">Plus get the free Contractor Red Flags checklist immediately</p>
+      <form class="email-form" action="/api/subscribe" method="post">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Get Free Access</button>
+      </form>
+      <p class="privacy-note">No spam. Unsubscribe anytime.</p>
+    </div>
+
+    <h2>Available Tools</h2>
+    
     <div class="tool-grid">
       <div class="tool-card">
-        <h3>Project Cost Estimator</h3>
-        <p>Estimate the cost of a common home improvement project based on average market prices.</p>
-        <span class="status">Coming Soon</span>
+        <div class="tool-header">
+          <h3>Project Cost Estimator</h3>
+          <span class="badge free">Free</span>
+        </div>
+        <p>Estimate the cost of common home improvement projects based on average market prices. Know what's fair before talking to contractors.</p>
+        <ul class="tool-features">
+          <li>Kitchen remodel estimates</li>
+          <li>Bathroom renovation costs</li>
+          <li>Deck & patio pricing</li>
+          <li>Roofing replacement estimates</li>
+        </ul>
+        <span class="status">Coming Soon - Q1 2026</span>
+        <p class="premium-hint"><strong>Premium:</strong> Get detailed material breakdowns, labor cost splits, and regional price adjustments.</p>
       </div>
 
       <div class="tool-card">
-        <h3>Contractor Red Flag Detector</h3>
-        <p>A checklist to spot warning signs before you hire someone with a truck and a dream.</p>
-        <span class="status">Coming Soon</span>
+        <div class="tool-header">
+          <h3>Contractor Red Flag Detector</h3>
+          <span class="badge free">Free</span>
+        </div>
+        <p>Interactive checklist to spot warning signs before you hire someone. Based on real stories from the field and expensive lessons learned.</p>
+        <ul class="tool-features">
+          <li>15+ warning signs checklist</li>
+          <li>Contract review essentials</li>
+          <li>Payment schedule red flags</li>
+          <li>License & insurance verification tips</li>
+        </ul>
+        <span class="status">Coming Soon - Q1 2026</span>
+        <p class="premium-hint"><strong>Premium:</strong> Get contractor vetting templates and contract clause library.</p>
       </div>
 
       <div class="tool-card">
-        <h3>DIY Planning Checklist</h3>
-        <p>A prep checklist for homeowners tackling their own projects, big or small.</p>
-        <span class="status">Coming Soon</span>
+        <div class="tool-header">
+          <h3>DIY Planning Checklist</h3>
+          <span class="badge free">Free</span>
+        </div>
+        <p>Step-by-step prep guide for tackling your own projects. Know what you're getting into before you start tearing down walls.</p>
+        <ul class="tool-features">
+          <li>Project planning templates</li>
+          <li>Tool & material checklists</li>
+          <li>Permit requirement guides</li>
+          <li>Safety equipment lists</li>
+        </ul>
+        <span class="status">Coming Soon - Q2 2026</span>
+        <p class="premium-hint"><strong>Premium:</strong> Access video walkthroughs and downloadable PDF guides.</p>
       </div>
+
+      <div class="tool-card">
+        <div class="tool-header">
+          <h3>Material Cost Calculator</h3>
+          <span class="badge free">Free</span>
+        </div>
+        <p>Calculate material costs for common projects. Know exactly what you need and what it should cost before hitting the hardware store.</p>
+        <ul class="tool-features">
+          <li>Lumber calculations</li>
+          <li>Drywall estimates</li>
+          <li>Paint coverage calculator</li>
+          <li>Flooring materials</li>
+        </ul>
+        <span class="status">Coming Soon - Q2 2026</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-header">
+          <h3>Quote Comparison Tool</h3>
+          <span class="badge premium">Premium</span>
+        </div>
+        <p>Compare multiple contractor quotes side-by-side. See which line items are inflated and where you're getting good value.</p>
+        <ul class="tool-features">
+          <li>Side-by-side quote analysis</li>
+          <li>Line item price checking</li>
+          <li>Markup detection</li>
+          <li>Fair price recommendations</li>
+        </ul>
+        <span class="status">Coming Soon - Q2 2026</span>
+        <p class="premium-hint"><strong>$19/month</strong> or $99/year - Cancel anytime</p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-header">
+          <h3>Project Timeline Builder</h3>
+          <span class="badge premium">Premium</span>
+        </div>
+        <p>Create realistic timelines for your projects. Know when to schedule contractors and how long things actually take.</p>
+        <ul class="tool-features">
+          <li>Realistic timeline estimates</li>
+          <li>Weather delay planning</li>
+          <li>Inspection scheduling</li>
+          <li>Contractor coordination</li>
+        </ul>
+        <span class="status">Coming Soon - Q3 2026</span>
+        <p class="premium-hint"><strong>$19/month</strong> or $99/year - Cancel anytime</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Want 1-on-1 Help With Your Project?</h2>
+      <p>Book a consultation to review quotes, get expert advice, or plan your project from start to finish.</p>
+      <a href="../services.html" class="cta-button">View Services →</a>
     </div>
 
     <footer>
@@ -47,4 +145,3 @@
   </div>
 </body>
 </html>
-
