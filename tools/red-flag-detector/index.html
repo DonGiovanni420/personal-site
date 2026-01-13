@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor Red Flag Detector | Joseph McAvoy</title>
+  <meta name="description" content="Free tool to check contractor red flags before you hire. Interactive checklist based on real trades experience.">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/tools.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Tools</a>
+      <a href="../../blog/index.html">Blog</a>
+      <a href="../../services.html">Services</a>
+      <a href="../../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container tool-page">
+    <div class="tool-intro">
+      <h1>Contractor Red Flag Detector</h1>
+      <p class="section-intro">Check all red flags that apply to your contractor. The more boxes checked, the higher the risk. Based on 10+ years in the trades watching homeowners get burned.</p>
+    </div>
+
+    <form id="redFlagForm" class="tool-form">
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Contractor refuses to provide a written contract or proposal</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Asks for full payment or large deposit upfront (more than 50%)</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Can't or won't provide proof of license or insurance</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Won't provide references from recent jobs or past clients</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Uses high-pressure sales tactics ("deal expires today" or "special discount right now")</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Provides vague timeline, scope of work, or project details</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Quote is significantly lower than other bids (50%+ cheaper)</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>No physical business address or only uses P.O. Box</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Poor or non-existent online presence, reviews, or references</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Won't explain materials, methods, or answer questions in detail</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Demands cash-only payments or avoids paper trail</span>
+        </label>
+      </div>
+
+      <div class="question">
+        <label>
+          <input type="checkbox" name="flag" value="1">
+          <span>Shows up in unmarked vehicle with no company branding or identification</span>
+        </label>
+      </div>
+
+      <button type="button" class="calculate-btn" onclick="calculateScore()">Calculate Risk Score</button>
+    </form>
+
+    <div id="results" class="results">
+      <p class="score-label">Red Flags Detected</p>
+      <div class="score" id="scoreDisplay">0/12</div>
+      <div class="recommendation" id="recommendation"></div>
+      
+      <div class="tool-cta">
+        <h3>Want the Complete Red Flags Guide?</h3>
+        <p>Get the full PDF checklist with detailed explanations, negotiation tips, and contract review essentials.</p>
+        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <input type="hidden" name="_subject" value="Red Flag Tool - PDF Request">
+          <input type="hidden" name="tool" value="Red Flag Detector">
+          <button type="submit">Get Free PDF Guide</button>
+        </form>
+        <p class="privacy-note">No spam. Just the guide and occasional tips.</p>
+      </div>
+    </div>
+
+    <div class="tool-cta" style="margin-top: 3rem;">
+      <h3>Need Help Vetting a Contractor?</h3>
+      <p>I'll personally review their quote, check their credentials, and tell you if they're legit.</p>
+      <a href="../../services.html" class="cta-button">View Services →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="mailto:joseph@josephmcavoy.com">Email Me</a>
+        <a href="https://github.com/DonGiovanni420" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/adrian-mcavoy-9635bb70/" target="_blank">LinkedIn</a>
+      </div>
+      <p class="copyright">© 2026 Joseph McAvoy. Tools built from experience, not buzzwords.</p>
+    </div>
+  </footer>
+
+  <script>
+    function calculateScore() {
+      const checkboxes = document.querySelectorAll('input[name="flag"]:checked');
+      const score = checkboxes.length;
+      const total = 12;
+      
+      const scoreDisplay = document.getElementById('scoreDisplay');
+      const recommendation = document.getElementById('recommendation');
+      
+      scoreDisplay.textContent = score + '/' + total;
+      
+      // Remove all risk classes
+      scoreDisplay.className = 'score';
+      
+      let recommendationHTML = '';
+      
+      if (score === 0) {
+        scoreDisplay.classList.add('risk-low');
+        recommendationHTML = '<strong>✅ Low Risk</strong><br>This contractor shows no major red flags based on your checklist. However, always verify their license, insurance, and check at least 3 references before signing any contract. Get everything in writing.';
+      } else if (score <= 2) {
+        scoreDisplay.classList.add('risk-moderate');
+        recommendationHTML = '<strong>⚠️ Moderate Risk</strong><br>A few concerns here. Address these issues directly with the contractor before moving forward. Make sure to get detailed answers in writing. Consider getting a second opinion or additional quotes.';
+      } else if (score <= 4) {
+        scoreDisplay.classList.add('risk-high');
+        recommendationHTML = '<strong>🚨 High Risk</strong><br>Multiple red flags detected (' + score + ' issues). Seriously reconsider working with this contractor. At minimum, get everything documented and verified. Better option: find other contractors to compare.';
+      } else {
+        scoreDisplay.classList.add('risk-danger');
+        recommendationHTML = '<strong>🛑 DANGER ZONE</strong><br>This contractor shows ' + score + ' red flags out of 12. Walk away immediately. This is exactly how homeowners lose thousands of dollars and end up with unfinished or shoddy work. Find other options.';
+      }
+      
+      recommendation.innerHTML = recommendationHTML;
+      document.getElementById('results').classList.add('show');
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Track in Google Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'tool_completed', {
+          'event_category': 'Tools',
+          'event_label': 'Red Flag Detector',
+          'value': score
+        });
+      }
+    }
+  </script>
+</body>
+</html>

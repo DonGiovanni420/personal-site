@@ -1,0 +1,464 @@
+/* tools.css - Styles for interactive tools */
+
+/* Tool Page Container */
+.tool-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tool-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tool-intro h1 {
+  margin-bottom: 1rem;
+}
+
+.tool-intro .section-intro {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Questions/Form Styling */
+.tool-form {
+  margin: 2rem 0;
+}
+
+.question {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.question:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.question label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.question input[type="checkbox"],
+.question input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  cursor: pointer;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+.question input[type="text"],
+.question input[type="number"],
+.question select {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: 0.5rem;
+}
+
+.question input:focus,
+.question select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.question-description {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.input-suffix {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-suffix span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Calculate/Submit Button */
+.calculate-btn,
+.submit-btn {
+  background: var(--accent);
+  color: #000;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 2rem auto;
+  display: block;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.calculate-btn:hover,
+.submit-btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+}
+
+.calculate-btn:disabled,
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Results Section */
+.results {
+  display: none;
+  background: var(--card-bg);
+  border: 2px solid var(--accent);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+.results.show {
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.score {
+  font-size: 3.5rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 1.5rem 0;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* Risk Level Indicators */
+.risk-low {
+  color: var(--success) !important;
+}
+
+.risk-moderate {
+  color: var(--warning) !important;
+}
+
+.risk-high {
+  color: #f85149 !important;
+}
+
+.risk-danger {
+  color: #f85149 !important;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Recommendation Box */
+.recommendation {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  text-align: left;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.recommendation strong {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Results List */
+.results-list {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.results-list h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.results-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+
+.results-list li:last-child {
+  border-bottom: none;
+}
+
+.results-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Cost Breakdown Tables */
+.cost-table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  background: var(--bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.cost-table th {
+  background: var(--card-bg);
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.cost-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cost-table tr:hover {
+  background: var(--card-bg);
+}
+
+.cost-table .total-row {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-top: 2px solid var(--accent);
+  background: var(--card-bg);
+}
+
+.cost-table .total-row td {
+  padding-top: 1.5rem;
+}
+
+/* Progress Indicator */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Tool CTA Section */
+.tool-cta {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.tool-cta h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.tool-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Tooltips/Help Text */
+.help-text {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  color: var(--accent);
+  text-decoration: underline dotted;
+}
+
+/* Range Sliders */
+input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .question {
+    padding: 1.25rem;
+  }
+
+  .question label {
+    font-size: 1rem;
+  }
+
+  .score {
+    font-size: 2.5rem;
+  }
+
+  .results {
+    padding: 1.5rem;
+  }
+
+  .calculate-btn,
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .cost-table {
+    font-size: 0.9rem;
+  }
+
+  .cost-table th,
+  .cost-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+}
+
+.loading:after {
+  content: '...';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
