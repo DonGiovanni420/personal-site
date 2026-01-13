@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joseph McAvoy</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Joseph McAvoy</h1>
-    <p>
-      Web developer. Silver stacking hobbyist. Occasional insomniac.<br>
-      I make things for the internet and sometimes they even work.
-    </p>
+    <div id="terminal">
+      <span id="typed"></span>
+      <span class="cursor">█</span>
+    </div>
 
     <div class="links">
       <a href="mailto:joseph@josephmcavoy.com">Email Me</a>
@@ -21,10 +20,48 @@
       <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
     </div>
 
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I started my career working in the trades — building, fixing, and figuring things out the hard way. Eventually, I picked up programming and now I create tools to help homeowners plan better, save money, and avoid getting ripped off by shady contractors. My mission is to bridge the gap between hands-on experience and modern tech, putting power back in the hands of regular people.</p>
+    </section>
+
+    <section class="tools">
+      <h2>Tools for Homeowners</h2>
+      <p>Coming soon: calculators, project planners, contractor red flag detectors, and more. If you're a homeowner trying to make smart decisions without getting buried in nonsense, you're in the right place.</p>
+    </section>
+
     <footer>
-      © 2026 Joseph McAvoy. Made with mild frustration and too much coffee.
+      © 2026 Joseph McAvoy. Built with real tools and digital ones.
     </footer>
   </div>
+
+  <script>
+    const lines = [
+      '> Initializing josephmcavoy.com ...',
+      '> Loading tools for smarter homeowners ...',
+      '> Mission: Help everyday people navigate home projects with confidence.'
+    ];
+
+    const typedEl = document.getElementById('typed');
+    let line = 0;
+    let char = 0;
+
+    function type() {
+      if (line < lines.length) {
+        if (char < lines[line].length) {
+          typedEl.textContent += lines[line][char++];
+          setTimeout(type, 40);
+        } else {
+          typedEl.textContent += '\n';
+          char = 0;
+          line++;
+          setTimeout(type, 800);
+        }
+      }
+    }
+
+    window.onload = type;
+  </script>
 </body>
 </html>
 
