@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joseph McAvoy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Joseph McAvoy | Stop Overpaying Contractors. Start Building Smarter.</title>
+  <meta name="description" content="Tools, guides, and expertise to help homeowners save money and avoid getting ripped off by shady contractors.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,37 +13,147 @@
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="tools/index.html">Tools</a>
-      <a href="#about">About</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="services.html">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
-    <div id="terminal">
-      <span id="typed"></span>
-      <span class="cursor">█</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div id="terminal">
+        <span id="typed"></span>
+        <span class="cursor">█</span>
+      </div>
+      <h1>Stop Overpaying Contractors.<br>Start Building Smarter.</h1>
+      <p class="hero-subtitle">I spent years in the trades watching homeowners get ripped off. Now I build tools and share knowledge to help you take control of your home projects.</p>
+      
+      <!-- Email Capture -->
+      <div class="email-capture">
+        <h3>Get the Free Contractor Red Flags Checklist</h3>
+        <p class="small">10 warning signs that'll save you thousands (and a lot of headaches)</p>
+        <form class="email-form" action="#" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Get Free Checklist</button>
+        </form>
+        <p class="privacy-note">No spam. Unsubscribe anytime. I respect your inbox.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="links">
-      <a href="mailto:joseph@josephmcavoy.com">Email Me</a>
-      <a href="https://github.com/DonGiovanni420" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/adrian-mcavoy-9635bb70/" target="_blank">LinkedIn</a>
+  <!-- Featured Tools Section -->
+  <section class="featured-tools">
+    <div class="container">
+      <h2>Free Tools to Get You Started</h2>
+      <p class="section-intro">No BS. No upsells (yet). Just useful stuff to help you plan better.</p>
+      
+      <div class="tool-grid">
+        <div class="tool-card">
+          <h3>Project Cost Estimator</h3>
+          <p>Get ballpark estimates for common home projects based on real market data. Know what's fair before talking to contractors.</p>
+          <span class="status">Coming Soon</span>
+          <a href="tools/index.html" class="tool-link">Explore Tools →</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>Contractor Red Flag Detector</h3>
+          <p>Interactive checklist to spot shady contractors before you hand over a deposit. Based on real stories from the field.</p>
+          <span class="status">Coming Soon</span>
+          <a href="tools/index.html" class="tool-link">Explore Tools →</a>
+        </div>
+
+        <div class="tool-card">
+          <h3>DIY Planning Checklist</h3>
+          <p>Step-by-step prep guide for tackling your own projects. Know what you're getting into before you start tearing down walls.</p>
+          <span class="status">Coming Soon</span>
+          <a href="tools/index.html" class="tool-link">Explore Tools →</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <section class="about" id="about">
-      <h2>About Me</h2>
-      <p>I started my career working in the trades — building, fixing, and figuring things out the hard way. Eventually, I picked up programming and now I create tools to help homeowners plan better, save money, and avoid getting ripped off by shady contractors. My mission is to bridge the gap between hands-on experience and modern tech, putting power back in the hands of regular people.</p>
-    </section>
+  <!-- About/Story Section -->
+  <section class="about-section" id="about">
+    <div class="container narrow">
+      <h2>Why I Built This</h2>
+      <p class="story">I'll never forget watching a contractor quote a homeowner <strong>$8,000 for a bathroom vanity install</strong> that should've cost $1,200. The homeowner had no idea what was reasonable, so they almost paid it.</p>
+      <p class="story">I started in the trades — framing houses, running electrical, fixing what others broke. I saw good work and terrible work. Honest contractors and absolute sharks. Eventually I picked up programming and realized I could build something to help regular people navigate this mess.</p>
+      <p class="story"><strong>My mission:</strong> Bridge the gap between hands-on experience and modern tech. Put power back in the hands of homeowners who just want to improve their space without getting screwed.</p>
+    </div>
+  </section>
 
-    <section class="tools">
-      <h2>Tools for Homeowners</h2>
-      <p><a href="tools/index.html">Click here</a> to explore homeowner tools like estimators, checklists, and planning aids. No fluff — just useful, honest tech.</p>
-    </section>
+  <!-- Ways to Work Together -->
+  <section class="services-preview">
+    <div class="container">
+      <h2>Ways to Work Together</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>🛠️ DIY Route</h3>
+          <p>Use my free tools and guides to plan and execute your own projects with confidence.</p>
+          <a href="tools/index.html" class="cta-button secondary">Browse Free Tools</a>
+        </div>
 
-    <footer id="contact">
-      © 2026 Joseph McAvoy. Built with real tools and digital ones.
-    </footer>
-  </div>
+        <div class="service-card">
+          <h3>💡 Get Guidance</h3>
+          <p>Book a consultation to review contractor quotes, get project advice, or avoid costly mistakes.</p>
+          <a href="services.html" class="cta-button secondary">View Services</a>
+        </div>
+
+        <div class="service-card">
+          <h3>📚 Learn the Ropes</h3>
+          <p>Courses and resources to master home improvement fundamentals (coming soon).</p>
+          <a href="blog/index.html" class="cta-button secondary">Read the Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest from Blog -->
+  <section class="blog-preview">
+    <div class="container">
+      <h2>Latest Insights</h2>
+      <p class="section-intro">No-nonsense advice from someone who's actually turned wrenches.</p>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <h3>5 Things Every Homeowner Should Know Before Hiring a Contractor</h3>
+          <p class="blog-excerpt">Most people focus on price. That's mistake #1. Here's what actually matters...</p>
+          <span class="status">Coming Soon</span>
+        </article>
+        <article class="blog-card">
+          <h3>Why Your Kitchen Remodel Quote is Probably BS</h3>
+          <p class="blog-excerpt">Breaking down the most inflated line items and what things actually cost...</p>
+          <span class="status">Coming Soon</span>
+        </article>
+      </div>
+      <a href="blog/index.html" class="cta-button secondary">View All Posts →</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container narrow">
+      <h2>Ready to Stop Getting Ripped Off?</h2>
+      <p>Join homeowners who are planning smarter and saving thousands.</p>
+      <div class="email-capture compact">
+        <form class="email-form" action="#" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Get Free Resources</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="mailto:joseph@josephmcavoy.com">Email Me</a>
+        <a href="https://github.com/DonGiovanni420" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/adrian-mcavoy-9635bb70/" target="_blank">LinkedIn</a>
+      </div>
+      <p class="copyright">© 2026 Joseph McAvoy. Built with real tools and digital ones.</p>
+    </div>
+  </footer>
 
   <script>
     const lines = [
@@ -73,4 +184,3 @@
   </script>
 </body>
 </html>
-
