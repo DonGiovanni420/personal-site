@@ -1,4 +1,4 @@
-/* style.css - Cool hacker-vibes with a touch of class */
+/* style.css - Cool hacker + builder aesthetic */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
@@ -9,6 +9,7 @@
   --muted: #8b949e;
   --border: #30363d;
   --link-hover: #1f6feb;
+  --card-bg: #161b22;
 }
 
 * {
@@ -26,16 +27,18 @@ body {
   align-items: center;
   padding: 4rem 1rem;
   min-height: 100vh;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="%2330363d" stroke-width="1"/></svg>');
+  background-repeat: repeat;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   text-align: center;
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #161b22;
+  background: var(--card-bg);
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
@@ -45,10 +48,17 @@ h1 {
   color: var(--accent);
 }
 
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  color: var(--accent);
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--text);
+  margin-top: 0.5rem;
 }
 
 .links {
@@ -78,5 +88,67 @@ footer {
   color: var(--muted);
   border-top: 1px solid var(--border);
   padding-top: 1rem;
+}
+
+/* Terminal typing effect */
+#terminal {
+  font-family: monospace;
+  font-size: 1.2rem;
+  white-space: pre-line;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Tools Page */
+.tools-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tool-card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+}
+
+.tool-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
